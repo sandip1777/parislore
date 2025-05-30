@@ -1,0 +1,86 @@
+// Brand Colors
+$primary-coral: #E91E63;
+$accent-charcoal: #424242;
+$neutral-ivory: #FFFFF0;
+$neutral-light-gray: #F5F5F5;
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;500&display=swap');
+
+:host {
+  font-family: 'Lora', serif;
+  background: $neutral-ivory;
+  color: $accent-charcoal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: $primary-coral;
+}
+
+// Card Styles
+.card {
+  background: $neutral-light-gray;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.08), 0 1.5px 6px rgba(66, 66, 66, 0.06);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: none;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(233, 30, 99, 0.16), 0 3px 12px rgba(66, 66, 66, 0.12);
+  transform: translateY(-6px) scale(1.02);
+}
+
+// Button Styles
+.btn-coral {
+  background: $primary-coral;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(233, 30, 99, 0.10);
+  transition: background 0.2s;
+}
+.btn-coral:hover {
+  background: darken($primary-coral, 8%);
+}
+.btn-ghost {
+  background: transparent;
+  color: $accent-charcoal;
+  border: 1px solid $accent-charcoal;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-ghost:hover {
+  background: $accent-charcoal;
+  color: #fff;
+}
+
+// Animations
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+.slide-up {
+  animation: slideUp 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+// Utility
+.text-center {
+  text-align: center;
+}

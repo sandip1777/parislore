@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  background: #fffafc;
+  border-bottom: 1px solid #f2f2f2;
+  box-shadow: 0 2px 8px 0 rgba(66,66,66,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #E91E63;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-family: 'Lora', serif;
+  font-size: 1.08rem;
+  color: #424242;
+  text-decoration: none;
+  padding: 0.4rem 1.1rem;
+  border-radius: 22px;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid transparent;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: #E91E63;
+  color: #fff;
+  border: 1px solid #E91E63;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+  .nav-links {
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+  }
+}

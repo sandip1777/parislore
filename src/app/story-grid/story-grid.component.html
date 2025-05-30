@@ -1,0 +1,8 @@
+<section class="story-grid">
+  <div class="card" *ngFor="let story of stories">
+    <img [src]="story.image" alt="Paris story image" class="story-image" />
+    <h2>{{ story.title }}</h2>
+    <p>{{ story.snippet }}</p>
+    <button class="btn-ghost read-more" tabindex="0">Read More</button>
+  </div>
+</section>

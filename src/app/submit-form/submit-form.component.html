@@ -1,0 +1,24 @@
+<section class="submit-form-section">
+  <h1>Submit Your Lore</h1>
+  <form (ngSubmit)="onSubmit()" #loreForm="ngForm" autocomplete="off">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" class="form-control" required [(ngModel)]="name" placeholder="Your name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" class="form-control" required [(ngModel)]="email" placeholder="you@email.com">
+    </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input id="title" name="title" type="text" class="form-control" required [(ngModel)]="title" placeholder="A magical moment in Paris...">
+    </div>
+    <div class="form-group">
+      <label for="body">Body</label>
+      <textarea id="body" name="body" class="form-control" required [(ngModel)]="body" rows="5" placeholder="Describe your lore..."></textarea>
+    </div>
+    <button type="submit" class="submit-btn" [disabled]="!loreForm.form.valid">Submit</button>
+    <div *ngIf="submitted" class="success-message">Thank you for submitting your lore!</div>
+    <div *ngIf="error" class="error-message">Submission failed. Please try again.</div>
+  </form>
+</section>
